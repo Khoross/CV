@@ -154,6 +154,14 @@
     #5\vspace{\parsep}%
   }\\}
   
+\newcommand{\simpleentry}[4]{%
+  #1&\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+    #4\vspace{\parsep}%
+  }\\}
+  
   \newenvironment{stackedentry}[2]{%
     \newcommand{\entryitem}[3]{%
       #1&\parbox[t]{11.8cm}{%
