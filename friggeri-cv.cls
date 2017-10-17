@@ -154,7 +154,7 @@
     #5\vspace{\parsep}%
   }\\}
   
-\newcommand{\simpleentry}[4]{%
+\newcommand{\entrybasic}[4]{%
   #1&\parbox[t]{11.8cm}{%
     \textbf{#2}%
     \hfill%
