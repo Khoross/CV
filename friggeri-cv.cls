@@ -145,7 +145,29 @@
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[4]{%
+\newcommand{\entry}[5]{%
+  #1&\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \emph{#3}%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #4}\\%
+    #5\vspace{\parsep}%
+  }\\}
+  
+  \newenvironment{stackedentry}[2]{%
+    \newcommand{\entryitem}[3]{%
+      #1&\parbox[t]{11.8cm}{%
+      \emph{#2}\\%
+      #5%
+    }%
+    \parbox[t]{11.8cm}{%
+      \textbf{#1}%
+      \hfill%
+      {\footnotesize\addfontfeature{Color=lightgray} #2}
+    }\\
+  }{\vspace{\parsep}}
+  
+  \newcommand{\entryitem}[2]{%
   #1&\parbox[t]{11.8cm}{%
     \textbf{#2}%
     \hfill%
